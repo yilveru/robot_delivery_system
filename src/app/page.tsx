@@ -1,9 +1,9 @@
-// import { redirect } from "next/navigation";
-
-// export default function Home() {
-//   redirect("/dashboard");
-// }
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return <h1>Hello from Render!</h1>;
+  redirect("/dashboard");
 }
+
+// export default function Home() {
+//   return <h1>Hello from Render!</h1>;
+// }
