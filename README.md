@@ -61,6 +61,14 @@ npm run dev
 
 The app will be running at: [http://localhost:3000](http://localhost:3000)
 
+### 5. Run the database migrations and seed data
+
+```bash
+npx drizzle-kit push
+npm run db:drizzle-seed
+```
+The seed script will create a random clients and restaurants for you.
+
 ---
 
 ## 🚀 Deployment
