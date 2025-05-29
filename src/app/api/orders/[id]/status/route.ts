@@ -12,11 +12,10 @@ const validTransitions = {
 };
 
 export async function GET(
-  req: Request,
-  { params }: { params: { id: string } }
+  req: Request
 ) {
-
-  const id = Number(params.id);
+  const url = new URL(req.url);
+  const id = Number(url.pathname.split("/").slice(-2)[0]);
 
   const order = await db.query.orders.findFirst({
     where: eq(orders.id, id),
@@ -36,7 +35,7 @@ export async function GET(
     );
   }
 
-  const updateData: { status: string; completedAt?: Date } = { status: expectedNext };
+  const updateData: { status: "assigned" | "picked_up" | "delivered" | "completed" | "pending"; completedAt?: Date } = { status: expectedNext as "assigned" | "picked_up" | "delivered" | "completed" | "pending" };
   if (expectedNext === "completed") {
     updateData.completedAt = new Date();
   }
