@@ -15,7 +15,7 @@ export async function POST(req: Request) {
             status: 'pending', clientId, restaurantId, items: JSON.stringify(items), createdAt: new Date()
         });
         return NextResponse.json({ success: true });
-    } catch (error) {
+    } catch {
         return NextResponse.json({ error: 'Error saving the order' }, { status: 500 });
     }
 }
@@ -25,7 +25,7 @@ export async function GET() {
     try {
         const ordersList = await getAll();
         return NextResponse.json(ordersList);
-    } catch (error) {
+    } catch {
         return NextResponse.json({ error: 'Error getting orders' }, { status: 500 });
     }
 }

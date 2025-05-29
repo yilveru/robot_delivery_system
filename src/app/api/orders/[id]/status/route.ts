@@ -1,6 +1,5 @@
 import { db } from "@/db";
 import { orders, robots } from "@/db/schema";
-import { create } from "domain";
 import { eq } from "drizzle-orm";
 import { NextResponse } from "next/server";
 
@@ -19,12 +18,9 @@ export async function GET(
 
   const id = Number(params.id);
 
-
   const order = await db.query.orders.findFirst({
     where: eq(orders.id, id),
   });
-  console.log("id Order:", id);
-  console.log("Order fetched:", order);
 
   if (!order) {
     return NextResponse.json({ message: "Order not found" }, { status: 404 });

@@ -42,7 +42,7 @@ export default function OrderStatus({ order }: { order: Order }) {
                 setCompletedAt(data.completedAt || "");
             }
             setLoading(false);
-        } catch (err) {
+        } catch {
             setLoading(false);
             setShowErrorTooltip(true);
             setTimeout(() => setShowErrorTooltip(false), 3000);
