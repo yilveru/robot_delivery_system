@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤖 Robot Delivery System
 
-## Getting Started
+## 🧾 Overview
 
-First, run the development server:
+This is a robot-based delivery management system built with **Next.js**, **PostgreSQL**, and **Drizzle ORM**. The system enables managing clients, restaurants, delivery robots, and the entire order lifecycle—from creation to completion.
+
+---
+
+## 🧠 Design Choices & Rationale
+
+### Frameworks & Libraries
+
+- **Next.js 15** – Modern full-stack framework with App Router support.
+- **Drizzle ORM** – Type-safe, SQL-friendly ORM with good developer ergonomics.
+- **PostgreSQL** – Robust open-source relational database.
+- **TailwindCSS** – For rapid and responsive UI styling.
+- **Docker Compose** – To containerize and manage the PostgreSQL database locally.
+
+### Architecture
+
+- Modular folder structure under `app/`, following Next.js 15 best practices.
+- REST API routes under `app/api/` for CRUD and status updates.
+- UI separated into components (`/components`) with reusable form and layout elements.
+- Backend data interactions abstracted through `db/schema.ts` and Drizzle queries.
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/yilveru/robot_delivery_system.git
+cd robot_delivery_system
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create a `.env` file based on `.env.example`:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```env
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=robot_delivery_db
+DB_USER=robot_delivery_user
+DB_PASS=deliverypassword
+```
 
-## Learn More
+### 3. Start PostgreSQL with Docker
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+docker-compose up -d
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Run the application
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm install
+npm run dev
+```
 
-## Deploy on Vercel
+The app will be running at: [http://localhost:3000](http://localhost:3000)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Deployment
+
+This app is deployed on **Render.com**, which hosts both the web app and a managed PostgreSQL database.
+
+- **Frontend URL**: [https://robot-delivery-system.onrender.com](https://robot-delivery-system.onrender.com)
+- **Database**: Managed PostgreSQL instance on Render
+
+> You can deploy it yourself by connecting the repo to Render and setting up a Web Service + PostgreSQL instance.
+
+---
+
+## 🔗 Links
+
+- **GitHub Repository**: [https://github.com/yilveru/robot_delivery_system](https://github.com/yilveru/robot_delivery_system)
+- **Live Application**: [https://robot-delivery-system.onrender.com](https://robot-delivery-system.onrender.com)
+
+---
+
+## 📄 License
+
+MIT License © Yilver Andres Uran
