@@ -36,7 +36,7 @@ export async function GET(
     );
   }
 
-  const updateData: any = { status: expectedNext };
+  const updateData: { status: string; completedAt?: Date } = { status: expectedNext };
   if (expectedNext === "completed") {
     updateData.completedAt = new Date();
   }

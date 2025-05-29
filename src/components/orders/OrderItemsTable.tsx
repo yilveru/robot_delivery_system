@@ -44,8 +44,8 @@ export default function OrderItemsTable({ items }: { items?: Items[] }) {
           </TableHeader>
 
           <TableBody className="divide-y divide-gray-100 dark:divide-white/[0.05]">
-            {Array.isArray(items) && items.map((item) => (
-              <TableRow>
+            {Array.isArray(items) && items.map((item, idx) => (
+              <TableRow key={idx}>
                 <TableCell className="px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400">
                   {item.quantity}
                 </TableCell>
