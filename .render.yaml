@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: nextjs-app
+    env: node
+    plan: free
+    buildCommand: |
+      rm -f vitest.config.ts
+      npm install
+      npm run build
+    startCommand: npm start
