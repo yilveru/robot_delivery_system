@@ -117,20 +117,22 @@ export default function OrderModal({ onClose, onSave }: Props) {
                         <div className="mt-7">
                             <div className="grid grid-cols-1 gap-x-6 gap-y-5 lg:grid-cols-2">
                                 <div className="col-span-2 lg:col-span-1">
-                                    <Label>Client</Label>
+                                    <Label htmlFor="client-select">Client</Label>
                                     <Select
                                         options={clients.map(c => ({ value: c.id, label: c.firstName + ' ' + c.lastName + ' / ' + c.address }))}
                                         placeholder="Select Client"
                                         onChange={(option) => setClientId(option)}
+                                        forLabel='client-select'
                                     />
                                 </div>
 
                                 <div className="col-span-2 lg:col-span-1">
-                                    <Label>Restaurant</Label>
+                                    <Label htmlFor="restaurant-select">Restaurant</Label>
                                     <Select
                                         options={restaurants.map(r => ({ value: r.id, label: r.name }))}
                                         placeholder="Select Restaurant"
                                         onChange={(option) => setRestaurantId(option)}
+                                        forLabel='restaurant-select'
                                     />
                                 </div>
                             </div>

@@ -1,0 +1,92 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-white/[0.05] dark:bg-white/[0.03]"
+  >
+    <div
+      class="max-w-full overflow-x-auto"
+    >
+      <table
+        class="min-w-full  undefined"
+      >
+        <thead
+          class="border-b border-gray-100 dark:border-white/[0.05]"
+        >
+          <tr>
+            <th
+              class=" px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+            >
+              Quantity
+            </th>
+            <th
+              class=" px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+            >
+              Description
+            </th>
+            <th
+              class=" px-5 py-3 font-medium text-gray-500 text-start text-theme-xs dark:text-gray-400"
+            >
+              unitPrice
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="divide-y divide-gray-100 dark:divide-white/[0.05]"
+        >
+          <tr>
+            <td
+              class=" px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400"
+            >
+              1
+            </td>
+            <td
+              class=" px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400"
+            >
+              Burger
+            </td>
+            <td
+              class=" px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400"
+            >
+              8
+            </td>
+          </tr>
+          <tr>
+            <td
+              class=" px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400"
+            >
+              2
+            </td>
+            <td
+              class=" px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400"
+            >
+              Fries
+            </td>
+            <td
+              class=" px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400"
+            >
+              3
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td
+              class=" px-8 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400"
+              colspan="2"
+            >
+              Total
+            </td>
+            <td
+              class=" px-4 py-3 text-gray-500 text-start text-theme-sm dark:text-gray-400"
+            >
+              $14.00
+            </td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</DocumentFragment>
+`;

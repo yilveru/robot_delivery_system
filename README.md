@@ -6,6 +6,32 @@ This is a robot-based delivery management system built with **Next.js**, **Postg
 
 ---
 
+## 🧑‍💻 Application Usage
+
+The application currently has **two main modules**:
+
+### 1. 🗂️ Dashboard (Orders)
+
+- Displays a **table of orders** with key information for each.
+- Each row includes two main actions:
+  - **Assign Robot**: Only available if there are robots with `available` status.
+  - **Update Status**: You cannot change the status from `pending` to `assigned` unless a robot has been assigned.
+- There is a **button outside the table** to **create new orders**:
+  - Opens a **form inside a modal**.
+  - Allows you to select a client and a restaurant.
+  - You can **dynamically add items** to the order.
+
+### 2. 🤖 Robot Management
+
+- Displays a **table of robots** with their current data and status.
+- Each robot row includes an **edit action**:
+  - You can update the `robot_id` (name) and its status (`available`, `busy`, etc.).
+- There is a **button outside the table** to **create new robots**:
+  - A random `robot_id` is generated automatically.
+  - The initial status for a new robot is set to `available`.
+
+---
+
 ## 🧠 Design Choices & Rationale
 
 ### Frameworks & Libraries
